@@ -1,26 +1,26 @@
 #std-header {
-box-sizing: border-box;
-height: 60px;
-display: flex;
-align-items: center;
+    box-sizing: border-box;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
 #toptitle {
-display: inline-block;
-margin-right: 35px;
-margin-left: 10px;
+    display: inline-block;
+    margin-right: 35px;
+    margin-left: 10px;
 }
 
 #topguide {
-display: inline-block;
+    display: inline-block;
 }
 
 #topguide li {
-font-size: 1.2em;
-display: inline-block;
-margin-right: 30px;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-right: 30px;
 }
 
 .bold {
-font-weight: bold;
+    font-weight: bold;
 }

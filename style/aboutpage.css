@@ -1,18 +1,18 @@
 main {
-display: flex;
-align-items: center;
-justify-content: center;
-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
 }
 
 main div {
-color: grey;
-font-size: 30px;
-text-align: center;
-justify-content: center;
+    color: grey;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
 }
 
 main div img {
-min-width: 170px;
-min-height: 170px;
+    min-width: 170px;
+    min-height: 170px;
 }
