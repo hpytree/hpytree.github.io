@@ -1,6 +1,6 @@
 const mylink = {
     props: ['name', 'href'],
-    template: `<li><a v-bind:href="href" class="bold">{{name}}</a></li>`
+    template: `<li><a v-bind:href="href">{{name}}</a></li>`
 };
 
 const stdHeader = {

@@ -3,12 +3,12 @@
     height: 60px;
     display: flex;
     align-items: center;
+    padding-left: 20px;
 }
 
 #toptitle {
     display: inline-block;
-    margin-right: 35px;
-    margin-left: 10px;
+    margin-right: 15px;
 }
 
 #topguide {
@@ -16,11 +16,7 @@
 }
 
 #topguide li {
-    font-size: 1.2em;
+    font-size: 16px;
     display: inline-block;
     margin-right: 30px;
-}
-
-.bold {
-    font-weight: bold;
 }
