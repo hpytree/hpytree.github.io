@@ -24,13 +24,14 @@ const stdHeader = {
     components: {
         'mylink': mylink
     },
-    template: `<header id="std-header" class="component">
-<h1 id="toptitle"><a href="/">hpytree</a></h1>
-<nav id="topguide">
-<ul>
-<mylink v-for="link in links" v-bind:name="link.name" v-bind:href="link.href"></mylink>
-</ul>
-</nav>
+    template: `
+<header id="std-header" class="component">
+    <h1 id="toptitle"><a href="/">hpytree</a></h1>
+        <nav id="topguide">
+            <ul>
+                <mylink v-for="link in links" v-bind:name="link.name" v-bind:href="link.href"></mylink>
+            </ul>
+        </nav>
 </header>`
 };
 
