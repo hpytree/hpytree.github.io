@@ -1,3 +1,10 @@
+import inhead from '../util/inhead.js';
+
+const o = {
+    style:["/style/components/std-header.css"],
+    cdn:["https://unpkg.com/vue@next"]
+};
+
 const mylink = {
     props: ['name', 'href'],
     template: `<li><a v-bind:href="href">{{name}}</a></li>`
@@ -15,6 +22,10 @@ const stdHeader = {
                     href: '/about.html'
                 },
                 {
+                    name: 'Tools',
+                    href: '/tools'
+                },
+                {
                     name: 'Source',
                     href: 'https://github.com/hpytree/hpytree.github.io'
                 }
@@ -23,6 +34,10 @@ const stdHeader = {
     },
     components: {
         'mylink': mylink
+    },
+    mounted() {
+        const h = new inhead(o);
+        h.addthem();
     },
     template: `
 <header id="std-header" class="component">

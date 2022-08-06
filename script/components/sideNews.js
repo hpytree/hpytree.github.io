@@ -1,3 +1,11 @@
+import inhead from '../util/inhead.js';
+import { geturl } from '../util/url.js';
+
+const o = {
+    style:["/style/components/side-news.css"],
+    cdn:["https://unpkg.com/vue@next"]
+};
+
 const sideNews = {
     data() {
         return {
@@ -6,15 +14,8 @@ const sideNews = {
         };
     },
     methods: {
-            isspace(ss) {
-                let v = true;
-                for (let s of ss) {
-                    v = s in [' ', '\t', '\r', '\n'];
-                    if (!v) {
-                        break;
-                    }
-                }
-                return v;
+            isspace(s) {
+                return (/^\s*$/).test(s);
             },
             ifempty() {
                 let v = true;
@@ -28,22 +29,29 @@ const sideNews = {
             }
     },
     mounted() {
-        this.newsxhr.open('GET', 'https://hpytree.github.io/script/newslist.txt');
+        const h = new inhead(o);
+        h.addthem();
+        this.newsxhr.open('GET', geturl('/script/components/newslist.txt'));
         this.newsxhr.onreadystatechange = () => {
             if (this.newsxhr.readyState === 4 && this.newsxhr.status === 200) {
-                this.news = this.newsxhr.responseText.split('\n');
+                let rowtext = this.newsxhr.responseText;
+                this.news = rowtext.split('\r\n');
             }
         };
+        this.newsxhr.send();
         setInterval(() => {
+            this.newsxhr.open('GET', geturl('/script/components/newslist.txt'));
             this.newsxhr.send();
         }, 5000);
     },
     template: `
 <section id="side-news">
     <h1>News</h1>
-        <ol v-if="!ifempty()">
-            <li v-for="n in news">{{n}}</li>
-        </ol>
+    <ol v-if="!ifempty()">
+        <template v-for="n in news">
+            <li v-if="!isspace(n)">{{n}}</li>
+        </template>
+    </ol>
     <p v-else>Not any news now.</p>
 </section>`
 };
