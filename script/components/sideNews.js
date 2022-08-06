@@ -45,7 +45,7 @@ const sideNews = {
         }, 5000);
     },
     template: `
-<section id="side-news">
+<section id="side-news" class="component">
     <h1>News</h1>
     <ol v-if="!ifempty()">
         <template v-for="n in news">
