@@ -9,8 +9,6 @@ const o = {
         ]
 };
 
-const md = new markdownit();
-
 const markdownView = {
     data() {
         return {
@@ -20,6 +18,7 @@ const markdownView = {
     props: ['src', 'type'],
     computed: {
         mdhtml() {
+            const md = new markdownit();
             return md.render(this.text);
         }
     },
