@@ -4,8 +4,7 @@ import markdownView from './components/markdownView.js';
 import inhead from './util/inhead.js';
 
 const o = {
-    style:["/style/main.css"],
-    cdn:["https://unpkg.com/vue@next"]
+    style:["/style/main.css"]
 };
 
 const appr = {

@@ -1,8 +1,7 @@
 import inhead from '../util/inhead.js';
 
 const o = {
-    style:["/style/components/std-header.css"],
-    cdn:["https://unpkg.com/vue@next"]
+    style:["/style/components/std-header.css"]
 };
 
 const mylink = {

@@ -31,6 +31,7 @@ class inhead {
                 let e = document.createElement('script');
                 e.src = this.hobj.cdn[i];
                 elems.push(e);
+                console.log('ahaha\n');
             }
         }
         for (let i = 0; i < this.hobj.style.length; i++) {

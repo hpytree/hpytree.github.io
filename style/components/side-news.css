@@ -3,8 +3,12 @@
     padding: 20px;
     top: calc(20vh);
     right: 20px;
-    border-width: 5px;
+    border-width: 1px;
     border-style: solid;
-    border-color: rgb(46,54,62);
-    border-radius: 20px;
+    border-color: #30363d;
+    border-radius: 6px;
+}
+
+#side-news h1 {
+    margin: 0;
 }

@@ -2,8 +2,7 @@ import inhead from '../util/inhead.js';
 import { geturl } from '../util/url.js';
 
 const o = {
-    style:["/style/components/side-news.css"],
-    cdn:["https://unpkg.com/vue@next"]
+    style:["/style/components/side-news.css"]
 };
 
 const sideNews = {
