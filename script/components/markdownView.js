@@ -9,11 +9,17 @@ const o = {
         ]
 };
 
+const md = new markdownit();
+
 const markdownView = {
+    data() {
+        return {
+            text: ""
+        };
+    },
     props: ['src', 'type'],
     computed: {
         mdhtml() {
-            const md = new markdownit();
             return md.render(this.text);
         }
     },
