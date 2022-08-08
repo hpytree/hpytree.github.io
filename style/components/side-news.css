@@ -3,10 +3,6 @@
     padding: 20px;
     top: calc(20vh);
     right: 20px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #30363d;
-    border-radius: 6px;
 }
 
 #side-news h1 {
