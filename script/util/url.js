@@ -1,5 +1,5 @@
 export function isfullurl(url) {
-    return (/https?:\/\/.*\/.*/).test(url);
+    return (/^https?:\/\//).test(url);
 }
 
 export function geturl(url) {
