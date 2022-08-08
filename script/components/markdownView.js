@@ -33,7 +33,7 @@ const markdownView = {
             xhr.send();
         }
     },
-    template: `<article v-html="mdhtml"></article>`
+    template: `<article class="markdown" v-html="mdhtml"></article>`
 };
 
 export default markdownView;
