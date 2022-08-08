@@ -1,5 +1,9 @@
 .component {
     background-color: rgb(13, 17, 23);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #30363d;
+    border-radius: 6px;
 }
 
 body {
