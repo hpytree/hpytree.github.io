@@ -8,6 +8,6 @@ export function geturl(url) {
     } else if (url[0] == '/') {
         return location.origin+url.slice(1);
     } else {
-        return location.origin+location.pathname.split('/').slice(0,-1).push('').join('/')+url;
+        return location.origin.slice(0,-1)+location.pathname.split('/').slice(0,-1).push('').join('/')+url;
     }
 }
