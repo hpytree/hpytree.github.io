@@ -9,7 +9,8 @@ const sideNews = {
     data() {
         return {
             news: [],
-            newsxhr: new XMLHttpRequest()
+            newsxhr: new XMLHttpRequest(),
+            ifhide: false
         };
     },
     methods: {
@@ -44,7 +45,7 @@ const sideNews = {
         }, 5000);
     },
     template: `
-<section id="side-news" class="component">
+<section id="side-news" class="component" v-bind:class="{hide:ifhide}" v-on:click="ifhide=true">
     <h1>News</h1>
     <ol v-if="!ifempty()">
         <template v-for="n in news">
