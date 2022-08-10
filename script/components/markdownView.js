@@ -5,6 +5,8 @@ const o = {
     style:["/style/components/markdown-view.css"]
 };
 
+const md = new markdownit();
+
 const h = new inhead(o);
 h.addthem();
 
@@ -17,7 +19,6 @@ const markdownView = {
     props: ['src', 'type'],
     computed: {
         mdhtml() {
-            const md = new markdownit();
             return md.render(this.text);
         }
     },
@@ -27,7 +28,7 @@ const markdownView = {
         } else if (this.type == 'url') {
             let xhr = new XMLHttpRequest();
             xhr.open('GET', geturl(this.src));
-            xhr.onreadystatechange = () => {
+            xhr.onload = () => {
                 this.text = xhr.responseText;
             }
             xhr.send();
