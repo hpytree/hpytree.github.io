@@ -1,6 +1,7 @@
 import stdHeader from './components/stdHeader.js';
 import sideNews from './components/sideNews.js';
 import markdownView from './components/markdownView.js';
+import itemsList from './components/itemsList.js'
 import inhead from './util/inhead.js';
 
 const o = {
@@ -15,7 +16,8 @@ const appr = {
     components: {
         'std-header': stdHeader,
         'side-news': sideNews,
-        'markdown-view':markdownView
+        'markdown-view':markdownView,
+        'items-list': itemsList
     }
 };
 

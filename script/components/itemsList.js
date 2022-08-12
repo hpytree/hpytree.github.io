@@ -1,10 +1,14 @@
 import { geturl } from '../util/url.js';
+import inhead from '../util/inhead.js'
+
+const o = {
+    style: ["/style/components/items-list.css"]
+};
 
 const itemsList = {
     props: {
         src: [Object, String],
-        type: String,
-        grade: Number
+        type: String
     },
     data() {
         return {
@@ -12,38 +16,26 @@ const itemsList = {
         };
     },
     mounted() {
-        if (!this.grade) {
-            this.grade = 1;
-        }
+        const h = new inhead(o);
+        h.addthem();
         if (this.type == 'object') {
             this.obj = this.object;
         } else if (this.type == 'json') {
-             fetch(this.src).then(res => this.obj = res.json());
+             fetch(geturl(this.src)).then(res => res.json()).then(obj => this.obj = obj);
         }
-    },
-    components: {
-        'he': hn,
-        'items-list': itemsList
     },
     template: `
 <section class="items-list">
-    <hn v-bind:grade="grade" v-if="obj.title">{{title}}</hn>
-    <p v-if="obj.description">{{object.description}}</p>
-    <ol v-if="obj.list">
+    <h1 v-if="obj.title">{{obj.title}}</h1>
+    <p v-if="obj.description">{{obj.description}}</p>
+    <ul v-if="obj.list">
          <li v-for="l in obj.list" class="component">
              <a v-bind:href="l.href">
-                 <div>{{l.title}}</div>
-                 <p v-if="l.description">{.description}}</p>
+                 <h2>{{l.title}}</h2>
+                 <p v-if="l.description">{{l.description}}</p>
              </a>
          </li>
-    </ol>
-    <section v-if="obj.children">
-        <items-list
-            v-for="child in obj.children"
-            v-bind:src="child"
-            v-bind:grade="grade+1"
-            type="object"></items-list>
-    </section>
+    </ul>
 </section>`
 };
 

@@ -1,0 +1,22 @@
+.items-list h1 {
+    font-size: 25px;
+}
+
+.items-list h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.items-list ul {
+    padding: 0;
+}
+
+.items-list li{
+    list-style-type: none;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+.items-list li p {
+    margin: 8px;
+}
