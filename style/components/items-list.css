@@ -2,9 +2,13 @@
     font-size: 25px;
 }
 
+.items-list p {
+    font-size: 20px;
+}
+
 .items-list h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .items-list ul {
@@ -13,10 +17,14 @@
 
 .items-list li{
     list-style-type: none;
-    padding: 10px;
-    padding-bottom: 5px;
+}
+
+.items-list li div {
+    padding: 15px;
 }
 
 .items-list li p {
-    margin: 8px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 8px;
 }

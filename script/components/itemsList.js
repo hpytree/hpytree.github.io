@@ -29,12 +29,14 @@ const itemsList = {
     <h1 v-if="obj.title">{{obj.title}}</h1>
     <p v-if="obj.description">{{obj.description}}</p>
     <ul v-if="obj.list">
-         <li v-for="l in obj.list" class="component">
-             <a v-bind:href="l.href">
-                 <h2>{{l.title}}</h2>
-                 <p v-if="l.description">{{l.description}}</p>
-             </a>
-         </li>
+        <li v-for="l in obj.list" class="component">
+            <a v-bind:href="l.href">
+                <div>
+                    <h2>{{l.title}}</h2>
+                    <p v-if="l.description">{{l.description}}</p>
+                </div>
+            </a>
+        </li>
     </ul>
 </section>`
 };
